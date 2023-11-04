@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Susheel Raai</title>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div class="scene scene--card">
+            <div class="card">
+                    <div class="card__face card__face--front" id="header">
+                        <div class="container">
+                            <nav>
+                                <span class="logo">P.<b> F</b>olio</span>
+                                <ul id="sidemenu">
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#services">Service</a></li>
+                                    <li><a href="#portfolio">Portfolio</a></li>
+                                    <li><a href="#certifications">Certifications</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <span class="toggleswitch">
+                                        <i class="fa fa-sun-o" aria-hidden="true"></i>
+                                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                    </span>
+                                    <i class="fa fa-times menu" onclick="closemenu()"></i>
+                                </ul>
+                                <i class="fa fa-bars menu" onclick="openmenu()"></i> 
+                            </nav>
+                            <div class="header-text">
+                                <p>Web Developer</p>
+                                <h1>Hi, I'm <span>Susheel</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back" id="headerVideo">
+                        <video loop id="myVideo" controls>
+                            <source src="assets/images/Dashboard_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="arrow" id="myBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        </div>
+        <i class="fa fa-arrow-circle-up" onclick="topFunction()" id="btnTop"></i>
+        <!-----------------------------------about---------------------------------------------->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="assets/images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            A proficient and reliable developer with a strong background of more than 6 years of experience in writing 
+                            production-ready, testable and secure code. Experienced in using various technologies and tools, such as C#, 
+                            .NET, Angular, Azure. A proactive and collaborative team member who communicates effectively and seeks to 
+                            improve processes and outcomes.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">PROFESSIONAL EXPERIENCE</p>
+                            <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                        </div>
+                        <div class="tab-contents active-tab has-scrollbar" id="skills">
+                            <ul>
+                                <li><span>Frame works</span><br><P>As a software developer, I specialize in building robust and scalable web applications using a combination of ASP.Net for server-side programming, ASP.NET MVC for implementing the Model-View-Controller design pattern, ASP.NET Web API for creating HTTP services, Bootstrap for responsive UI design, and Angular for dynamic front-end functionalities.</P></li>
+                                <li><span>Programming languages</span><br><P>I leverage the power of programming languages like C# for server-side logic, HTML for structuring the web content, and JavaScript for creating interactive elements, providing a comprehensive and dynamic user experience.</P></li>
+                                <li><span>Relational Database</span><br><P>I employ SQL Server and MySQL, two powerful relational database management systems, to design, implement, and manage complex databases, ensuring efficient data storage and retrieval.</P></li>
+                                <li><span>Cloud</span><br><p>I utilize Microsoft Azure and Amazon Web Services (AWS) to build, deploy, and manage applications through their global network of data centers, providing scalable and reliable cloud solutions.</p></li>
+                                <li><span>Non-Technical</span><br><p>As a software developer, I not only excel in technical competencies but also demonstrate strong leadership qualities, effective presentation skills, and sharp analytical abilities, which are crucial for problem-solving and team collaboration.</p></li>
+                            </ul>
+                            <a class="learn-more" target="_blank" href="https://www.linkedin.com/in/susheelraai/">Learn more</a>
+                        </div>
+                        <div class="tab-contents has-scrollbar" id="experience">
+                            <ul>
+                                <li><span>Aug 2022 - Present</span><br>Software Developer at HESA / Jisc</li>
+                                <li><span>Sept 2018 - Dec 2020</span><br>Software Developer at ZenQ</li>
+                                <li><span>April 2013 - Feb 2017</span><br>Intern at Satya Technologies</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents has-scrollbar" id="education">
+                            <ul>
+                                <li><span>Feb 2021 - Feb 2022</span><br> MSc from University of East Anglia </li>
+                                <li><span>Sept 2014 - Jun 2018</span><br>B.Tech from CMR College of Engineering and Technology (JNTUH)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------Services------------------------------------->
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa fa-laptop"></i>
+                        <h2>Software Developer</h2>
+                        <p>A versatile and collaborative software developer with a solid background in agile development and scrum 
+                            methodology. Skilled in planning, designing, coding, testing and documenting programs based on requirements 
+                            and specifications. Experienced in working with HESA systems and adhering to agreed standards, patterns, 
+                            architectures and constraints. Proficient in debugging and resolving issues in applications and facilitating the 
+                            build and release capability. A proactive and continuous learner who keeps up to date with technologies and 
+                            practices.</p>
+                        <a class="service-learn-more" target="_blank" href="https://www.linkedin.com/in/susheelraai/">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-code"></i>
+                        <h2>Web Application Developer</h2>
+                        <p>A strong expertise in developing business-critical applications and experience in writing reusable components.
+                            Implemented APIs and RESTful services, and converted JavaScript applications to Angular applications. Skilled 
+                            in creating project designs, web applications, user stories and prototypes based on the client’s requirements. 
+                            Adept in coordinating with the testing team, resolving bugs, designing pipelines and leading the project 
+                            deployment.
+                            </p>
+                        <a class="service-learn-more" target="_blank" href="https://www.linkedin.com/in/susheelraai/">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-id-badge"></i>
+                        <h2>Software Intern</h2>
+                        <p>An intern with a deep understanding of Object Oriented Programming (OOP) concepts and SOLID principles. 
+                            Experienced in process modelling using UML, Sequence Diagrams, Flowcharts, Activity Diagrams and use cases 
+                            using UMLet tool. Skilled in writing unit tests using NUnit testing framework to ensure the quality and 
+                            functionality of user interfaces and back-end processing. Knowledgeable in web technologies such as HTML, 
+                            HTML5, XHTML, XML and JavaScript.
+                            </p>
+                        <a class="service-learn-more" target="_blank" href="https://www.linkedin.com/in/susheelraai/">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-------------------------------------portfolio-------------------------------------------->
+
+         <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="assets/images/work-1.png" > 
+                        <div class="layer">
+                            <h3>Online food order</h3>
+                            <p>An online food ordering website developed using Angular and .Net Web API is a platform that allows customers to order food from their favorite restaurant(Vadde's) and have it delivered to their doorstep. The website is built using Angular, a popular front-end web development framework, and .Net Web API, a framework for building HTTP services. This combination of technologies allows for a fast, responsive, and user-friendly experience for customers. The website may also include features such as restaurant menus, customer reviews, and the ability to track orders in real-time.</p>
+                            <a target="_blank" href="https://github.com/SusheelRaai/The-Vaddes-Restaurant"><i class="fa fa-external-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="assets/images/work-2.png" >
+                        <div class="layer">
+                            <h3>Portfolio Website</h3>
+                            <p>This guide will walk you through the process of creating a personal portfolio website using HTML, CSS, and JavaScript. This site can serve as my online resume or CV. It will feature my name and job title, along with an image of mine. It will also showcase my skills, work experience, and educational background. Additionally, the site will include a list of services I offer and a portfolio of my work. The footer of the site will contain my contact information and a contact form, the data from which can be received directly on my Google Sheets.</p>
+                            <a target="_blank" href="https://github.com/SusheelRaai/SusheelRaai.github.io"><i class="fa fa-external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+
+         <!---------------------------------Certifications------------------------->
+
+
+         <div id="certifications">
+            <div class="container">
+            <h1 class="sub-title">Certifications</h1>
+            <div class="certificate-list has-scrollbar">
+              <div class="certificate-item">
+                  <img src="assets/images/Certificate1.png">
+                  <div class="layer">
+                    <h3>freeCodeCamp <i class="fa fa-free-code-camp"></i></h3>
+                    <p>Foundational C# with Microsoft developer certification</p>
+                    <a target="_blank" href="https://www.freecodecamp.org/certification/fcc2fc6dc34-78db-4734-a8ce-0d0de2c6b214/foundational-c-sharp-with-microsoft"><i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <div class="certificate-item">
+                  <img src="assets/images/certificate2.png">
+                  <div class="layer">
+                    <h3>freeCodeCamp <i class="fa fa-free-code-camp"></i></h3>
+                    <p>Front End Development Libraries developer certification</p>
+                    <a target="_blank" href="https://www.freecodecamp.org/certification/fcc2fc6dc34-78db-4734-a8ce-0d0de2c6b214/front-end-development-libraries"><i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <div class="certificate-item">
+                  <img src="assets/images/Certificate4.png" >
+                  <div class="layer">
+                    <h3>freeCodeCamp <i class="fa fa-free-code-camp"></i></h3>
+                    <p>Responsive Web Design developer certification</p>
+                    <a target="_blank" href="https://www.freecodecamp.org/certification/fcc2fc6dc34-78db-4734-a8ce-0d0de2c6b214/responsive-web-design"><i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <div class="certificate-item">
+                  <img src="assets/images/certificate5.png" >
+                  <div class="layer">
+                    <h3>Microsoft </h3><span class="microsoft"></span>
+                    <p>Microsoft Certified: Azure Fundamentals issue by Microsoft</p>
+                    <a target="_blank"href="https://www.credly.com/badges/bced09a3-1366-4702-9d74-16214fc2e1c2/linked_in_profile"><i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <div class="certificate-item">
+                  <img src="assets/images/SQL_Certification.png" >
+                  <div class="layer">
+                    <h3>HackerRank <b>H</b><span class="rectangle"></span></h3>
+                    <p>C# Certification developer certification</p>
+                    <a target="_blank" href="https://www.hackerrank.com/certificates/acc564b6debd"><i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <div class="certificate-item">
+                <img class="more-certifications" src="assets/images/Certifications_logo.png" >
+                <div class="layer">
+                  <p>To know more about my certifications please click below button</p>
+                  <a target="_blank" href="https://www.linkedin.com/in/susheelraai/"><i class="fa fa-external-link"></i></a>
+                </div>
+             </div>
+            </div>
+        </div>
+     </div><br><br><br><br>
+    
+<!-------------------------------------Contact-------------------------------------------->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa fa-paper-plane"></i> raaisusheelkumar@gmail.com</p>
+                        <p><i class="fa fa-phone-square"></i> +44 7760204953</p>
+                        <div class="social-icons">
+                            <a target="_blank" href="https://www.linkedin.com/in/susheelraai/"><i class="fa fa-linkedin-square"></i></a>
+                            <a target="_blank" href="https://github.com/SusheelRaai"><i class="fa fa-github"></i></a>
+                        </div>
+                        <a href="assets/SUSHEEL_RAAI_CV.pdf" download class="btn btnCV">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btnCV">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright <i class="fa fa-copyright"></i> Susheel. Made by Easy Tutorials</p>
+            </div>
+        </div>
+
+<!--------------------------------------------- Scripts--------------------------------------------------------->
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+            /*------------------------Side Menu script----------------------------------*/
+
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+                sidemenu.style.display = 'block';
+            }
+
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+                sidemenu.style.display = 'none';
+            }
+
+            /*------------------------Scroll to top----------------------------------*/
+            var topview = document.getElementById("btnTop");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topview.style.display = "block";
+            } else {
+                topview.style.display = "none";
+            }
+            }
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+
+            /*------------------------Switching Theme(Dark or Light)----------------------------------*/
+
+            const toggleswitch = document.querySelector(".toggleswitch");
+            toggleswitch.addEventListener('click', function(){
+                document.body.classList.toggle('switch');
+            })
+
+
+            /*-----------------------------------Flipping dashboard---------------------------------*/
+
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+            var cards = document.querySelectorAll('.card');
+
+            [...cards].forEach((card)=>{
+            btn.addEventListener( 'click', function() {
+                card.classList.toggle('is-flipped');
+                video.pause();
+              });
+            });
+
+           /*------------------------------------Play Pause button visibility based on mouse movement-----------*/
+           
+           
+            let idleTimer = null;
+            let idleState = false;
+            function showPlayPause(time) {
+                clearTimeout(idleTimer);
+                if (idleState == true) {
+                    document.getElementById("myBtn").style.display = 'block' ;
+                }
+                idleState = false;
+                idleTimer = setTimeout(function() {
+                    document.getElementById("myBtn").style.display = 'none';
+                    idleState = true;
+                }, time);
+                }
+
+                showPlayPause(3000);
+
+                window.onmousemove = function(){
+                    showPlayPause(2000);
+                }
+
+        </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2tQmbunMkOvJJ0hOXu3hjGpIcvSdaaj5nlDvlO5jK_rbuO6jrzip4Deck-rNCoJvQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
