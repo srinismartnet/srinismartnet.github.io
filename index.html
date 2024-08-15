@@ -356,12 +356,65 @@
     </div>
 	
 	<div id="aspnetcore" class="questions">
-	What is Kestrel in ASP.NET Core, and how does it compare to IIS hosting?
-	Answer:
-	Kestrel is the default, lightweight, cross-platform web server included in ASP.NET Core. It can be used as a standalone server or behind a reverse proxy like IIS or Nginx for production scenarios. Kestrel is more performant than IIS because it's optimized for modern web workloads, but it's not a full-fledged web server, so IIS or Nginx is recommended for security and advanced hosting features.
+	 What is Kestrel in ASP.NET Core, and how does it compare to IIS hosting?
 
-	Follow-up:
-	When configuring Kestrel in production, it's typically hosted behind a reverse proxy (e.g., Nginx or IIS) to handle requests and provide additional security features like SSL termination.
+Kestrel is the default, lightweight, cross-platform web server included in ASP.NET Core. It can be used as a standalone server or behind a reverse proxy like IIS or Nginx for production scenarios. 
+Kestrel is more performant than IIS because it's optimized for modern web workloads, but it's not a full-fledged web server, so IIS or Nginx is recommended for security and advanced hosting features.
+
+When configuring Kestrel in production, it's typically hosted behind a reverse proxy (e.g., Nginx or IIS) to handle requests and provide additional security features like SSL termination.
+
+1. How does the ASP.NET Core middleware pipeline work?
+
+ASP.NET Core uses a middleware pipeline to handle requests and responses. Middleware components are executed sequentially, processing requests and returning responses. 
+Middleware can either handle a request entirely or pass it to the next component by calling next(). 
+Common middleware includes authentication, logging, static file serving, etc. 
+The pipeline is configured in the Startup.cs file using the Configure method.
+
+Follow-up:
+Use: Adds middleware that can process both requests and responses.
+Run: Adds terminal middleware that only processes requests and doesn't call the next middleware.
+Map: Branches the middleware pipeline based on the request path.
+
+2.Explain the Dependency Injection (DI) system in ASP.NET Core?
+
+ASP.NET Core has built-in support for Dependency Injection (DI), which helps in managing service lifetimes (singleton, scoped, transient). 
+Services are registered in the Startup.ConfigureServices method, and the framework automatically injects them where needed, promoting loose coupling and easier testing.
+
+Follow-up:
+For complex object graphs, you'd typically rely on constructor injection or method injection, ensuring dependencies are correctly passed. Custom service lifetimes can be implemented by extending the built-in DI container or using more advanced containers like Autofac.
+
+3. How would you configure and handle multiple environments in ASP.NET Core?
+
+ASP.NET Core provides an environment system via ASPNETCORE_ENVIRONMENT (e.g., Development, Staging, Production). 
+You can configure different settings for each environment using environment-specific JSON files like appsettings.Development.json, or by using the IHostingEnvironment service to detect and adjust behavior at runtime.
+You can use IConfiguration to load and bind settings from various sources (environment variables, JSON files, etc.) and inject them into services or controllers. 
+This supports seamless environment-specific configuration.
+
+4. What are some performance optimization techniques you have used in ASP.NET Core applications?
+
+Response Caching: Use caching to reduce server load and response time (e.g., in-memory or distributed caching).
+Compression: Enable response compression middleware (Gzip/Brotli) to reduce payload size.
+Pooling Database Connections: Use connection pooling to reduce database connection overhead.
+Use Asynchronous Code: To avoid thread blocking, use async patterns.
+CDN for Static Files: Offload static content like images, CSS, and JavaScript to a CDN.
+
+5. How does ASP.NET Core handle authentication and authorization?
+
+ASP.NET Core uses authentication schemes like Cookies, JWT Bearer tokens, and OAuth to authenticate users. 
+For authorization, ASP.NET Core provides role-based and policy-based authorization, allowing fine-grained access control.
+
+Claims-based Authorization: Works by associating claims with a user's identity.
+Policy-based Authorization: Offers more control by defining policies that incorporate requirements like roles, claims, or custom logic to determine if a user can perform a certain action.
+
+6. Can you explain how routing works in ASP.NET Core?
+
+ASP.NET Core uses a routing system to map incoming requests to endpoints (controllers, Razor pages, etc.). 
+Routing is typically defined in Startup.Configure, and you can choose between conventional routing (defined routes) and attribute-based routing (route attributes on controllers/actions).
+
+Conventional Routing: Routes are centrally defined in Startup.cs.
+Attribute-Based Routing: Routes are applied directly to controllers and action methods, allowing for more fine-grained control.
+
+7. What is the role of IHostedService in ASP.NET Core, and when would you use it?
 	</div>
 
 
