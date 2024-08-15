@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background: #1C1C1C;
+    background: #393d5f;
     color: #fff;
 }
 
@@ -891,3 +891,8 @@ nav .menu{
   .switch #btnTop:hover{
       color: #0101DF;
   }
+  
+.hidden
+{
+  display: none;
+}

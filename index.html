@@ -354,12 +354,43 @@
         <p>Copyright <i class="fa fa-copyright"></i> Srinivas Patha</p>
       </div>
     </div>
+	
+	<div id="aspnetCore" class="hidden">
+	What is Kestrel in ASP.NET Core, and how does it compare to IIS hosting?
+	Answer:
+	Kestrel is the default, lightweight, cross-platform web server included in ASP.NET Core. It can be used as a standalone server or behind a reverse proxy like IIS or Nginx for production scenarios. Kestrel is more performant than IIS because it's optimized for modern web workloads, but it's not a full-fledged web server, so IIS or Nginx is recommended for security and advanced hosting features.
+
+	Follow-up:
+	When configuring Kestrel in production, it's typically hosted behind a reverse proxy (e.g., Nginx or IIS) to handle requests and provide additional security features like SSL termination.
+	</div>
+
 
     <!--------------------------------------------- Scripts--------------------------------------------------------->
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
+	  
+		function getParameterByName(name, url = window.location.href) {
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+
+		var item1 = getParameterByName('aspnetCore');
+		var item2 = getParameterByName('item2');
+
+		if (item1 == "aspnetCore")
+		{
+		  document.getElementById("aspnetCore").style.display = "block";
+		}
+		if (item2 == "value2")
+		{
+		  document.getElementById("value2").style.display = "block";
+		}
 
       function opentab(tabname) {
         for (tablink of tablinks) {
